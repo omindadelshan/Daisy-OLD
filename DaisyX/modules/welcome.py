@@ -383,12 +383,12 @@ def new_member(update: Update, context: CallbackContext):
                         )
                     new_join_mem = f'<a href="tg://user?id={user.id}">{html.escape(new_mem.first_name)}</a>'
                     message = msg.reply_text(
-                        f"{new_join_mem}, click the button below to prove you're human.\nYou have 120 seconds.",
+                        f"{new_join_mem}, 🥳 ᴄʟɪᴄᴋ ᴛʜɪꜱ ʙᴜᴛᴛᴏɴ ᴀɴᴅ ᴘʀᴏᴠᴇ ʏᴏᴏᴜʀ ʜᴜᴍᴀɴ.\nʏᴏᴜ ʜᴀᴠᴇ 120 ꜱᴇᴄᴏɴᴅ.",
                         reply_markup=InlineKeyboardMarkup(
                             [
                                 {
                                     InlineKeyboardButton(
-                                        text="Yes, I'm human.",
+                                        text="🔱 ʏᴇꜱ ɪ ᴀᴍ ʜᴜᴍᴇɴ 🔱.",
                                         callback_data=f"user_join_({new_mem.id})",
                                     )
                                 }
@@ -1111,7 +1111,7 @@ dispatcher.add_handler(CLEAN_SERVICE_HANDLER)
 dispatcher.add_handler(BUTTON_VERIFY_HANDLER)
 dispatcher.add_handler(WELCOME_MUTE_HELP)
 
-__mod_name__ = "Greetings 🙏"
+__mod_name__ = "Greetings"
 __command_list__ = []
 __handlers__ = [
     NEW_MEM_HANDLER,
